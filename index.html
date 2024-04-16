@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus objetivos do ano</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="conteudo-principal">
+        <h2 class="titulo-principal">Meus Objetivos do ano<span>_</span></h2>
+        <div class="conteudo">
+        <div class="botoes">
+            <button class="botao ativo">Tirar a carteira</button>
+           
+            <button class="botao">Passar de ano</button>
+            <button class="botao">Aprender inglês</button>
+            <button class="botao">Fazer o Enem</button>
+        </div>
+        <div class="abas-textos">
+            <div class="aba-conteudo ativo">
+                <h3 class="aba-conteudo-titulo-principal">Tirar notas altas</h3>
+                <h4 class="aba-conteudo-titulo-secundario">1 ano</h4>
+                <div class="contador"></div>
+            </div>
+            <div class="aba-conteudo">
+                <h3 class="aba-conteudo-titulo-principal">Passar em psicologia</h3>
+                <h4 class="aba-conteudo-titulo-secundario">2 anos</h4>
+                <div class="contador"></div>
+            </div>
+            <div class="aba-conteudo">
+                <h3 class="aba-conteudo-titulo-principal">Arrumar um trabalho</h3>
+                <h4 class="aba-conteudo-titulo-secundario">6 meses</h4>
+                <div class="contador"></div>
+            </div>
+            <div class="aba-conteudo">
+                <h3 class="aba-conteudo-titulo-principal">melhorar meu currículo</h3>
+                <h4 class="aba-conteudo-titulo-secundario">6 meses</h4>
+                <div class="contador"></div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>     const botoes = document.querySelectorAll(".botao");
+const textos = document.querySelectorAll(".aba-conteudo");
+
+for(let i=0;i <botoes.length;i++){
+    botoes[i].onclick = function(){
+
+        for(let j=0;j<botoes.length;j++){
+            botoes[j].classList.remove("ativo");
+            textos[j].classList.remove("ativo");
+        }
+
+        botoes[i].classList.add("ativo");
+        textos[i].classList.add("ativo");
+    }
+}
+const contadores = document.querySelectorAll(".contador");
+const tempoObjetivo1 = new Date("2024-10-05T00:00:00");
+let tempoAtual = new Date();
+let tempoFinal = tempoObjetivo1 - tempoAtual;
+
+let segundos = Math.floor(tempoFinal / 1000);
+let minutos = Math.floor(segundos / 60);
+let horas = Math.floor(minutos / 60);
+let dias = Math.floor(horas / 24);
+
+segundos %= 60;
+minutos %= 60;
+horas %= 24;
+
+contadores[0].textContent = dias + " dias " + horas + " horas " + minutos + " minutos " + segundos + " segundos";<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus objetivos do ano</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="conteudo-principal">
+        <h2 class="titulo-principal">Meus Objetivos do ano<span>_</span></h2>
+        <div class="conteudo">
+        <div class="botoes">
+            <button class="botao ativo">Viajar para Natal-RN</button>
+            <button class="botao">Cursos na área de investimentos</button>
+            <button class="botao">Aprender programação</button>
+            <button class="botao">Ingressar em um Mestrado</button>
+        </div>
+        <div class="abas-textos">
+            <div class="aba-conteudo ativo">
+                <h3 class="aba-conteudo-titulo-principal">Estudar 4 cursos na Alura</h3>
+                <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
+                <div class="contador"></div>
+            </div>
+            <div class="aba-conteudo">
+                <h3 class="aba-conteudo-titulo-principal">Criar 5 projetos em Javascript</h3>
+                <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
+                <div class="contador"></div>
+            </div>
+            <div class="aba-conteudo">
+                <h3 class="aba-conteudo-titulo-principal">Criar um portfolio com os meus 3 melhores projetos</h3>
+                <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
+                <div class="contador"></div>
+            </div>
+            <div class="aba-conteudo">
+                <h3 class="aba-conteudo-titulo-principal">Atualizar meu curriculo com os certificados da Alura</h3>
+                <h4 class="aba-conteudo-titulo-secundario">Tempo para completar o objetivo</h4>
+                <div class="contador"></div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>
